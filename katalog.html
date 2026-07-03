@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.7);
+        }
+        /* Custom hide scrollbar */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#596376",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-tint": "#006a63",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#e9e9eb",
+                        "tertiary-fixed-dim": "#c6c6c8",
+                        "secondary-container": "#d6e0f6",
+                        "secondary-fixed-dim": "#bdc7dc",
+                        "primary-fixed-dim": "#80d5cb",
+                        "secondary-fixed": "#d9e3f9",
+                        "surface-container-low": "#f3f3f4",
+                        "secondary": "#555f71",
+                        "surface-variant": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#454749",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#e2e2e4",
+                        "on-secondary-fixed": "#121c2c",
+                        "surface-container": "#eeeeee",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-dim": "#dadada",
+                        "primary-container": "#0f766e",
+                        "on-primary-fixed-variant": "#00504a",
+                        "primary": "#005c55",
+                        "inverse-primary": "#80d5cb",
+                        "on-surface": "#1a1c1c",
+                        "outline-variant": "#bdc9c6",
+                        "on-primary": "#ffffff",
+                        "background": "#f9f9f9",
+                        "on-primary-container": "#a3faef",
+                        "on-surface-variant": "#3e4947",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "on-background": "#1a1c1c",
+                        "surface-bright": "#f9f9f9",
+                        "outline": "#6e7977",
+                        "primary-fixed": "#9cf2e8",
+                        "on-primary-fixed": "#00201d",
+                        "surface": "#f9f9f9",
+                        "tertiary": "#4f5153",
+                        "tertiary-container": "#68696b",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-fixed-variant": "#3d4759"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "section-gap": "120px",
+                        "margin-mobile": "24px",
+                        "margin-desktop": "80px",
+                        "base": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-display": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0", "fontWeight": "500"}],
+                        "headline-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-surface/80 glass-effect">
+<nav class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-primary hover:opacity-80 transition-opacity">LuxeDrive</a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="katalog.html">Armada</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="paket_wisata.html">Paket</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="tentang.html">Tentang Kami</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="contact.html">Kontak</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-md hover:opacity-80 transition-opacity active:scale-95 duration-200">
+                Hubungi via WhatsApp
+            </button>
+</nav>
+</header>
+<!-- Hero / Title Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mt-20 mb-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<span class="font-label-md text-label-md text-primary tracking-widest block mb-4">ELITE ELEKTRIK</span>
+<h1 class="font-headline-lg text-headline-lg leading-tight">Presisi Terkurasi. Kemewahan Berkelanjutan.</h1>
+</div>
+<div class="flex gap-4 no-scrollbar overflow-x-auto pb-4 md:pb-0">
+<button class="category-btn px-6 py-2 rounded-full border border-outline text-label-md font-label-md bg-on-surface text-surface" data-active="true" onclick="filterFleet('all')">Semua Model</button>
+<button class="category-btn px-6 py-2 rounded-full border border-outline-variant text-label-md font-label-md text-secondary hover:border-primary transition-all" onclick="filterFleet('Sedan')">Sedan</button>
+<button class="category-btn px-6 py-2 rounded-full border border-outline-variant text-label-md font-label-md text-secondary hover:border-primary transition-all" onclick="filterFleet('SUV')">SUV</button>
+<button class="category-btn px-6 py-2 rounded-full border border-outline-variant text-label-md font-label-md text-secondary hover:border-primary transition-all" onclick="filterFleet('Performance')">Performa</button>
+</div>
+</div>
+</section>
+<!-- Fleet Grid -->
+<main class="max-w-container-max mx-auto px-margin-desktop py-base">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-section-gap gap-x-gutter" id="fleet-grid">
+<!-- Car Card: Porsche Taycan -->
+<article class="car-card group flex flex-col" data-category="Performance">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container-low mb-6">
+<img alt="Profil samping Porsche Taycan putih yang ramping diparkir di lingkungan arsitektur beton minimalis." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSBEuBwDMlVgwpqGMBPUcKJO3JedlWDYM88aQZBWRVsVFbTUcDXCr7RDRGhsp2Mvu0oxcwIo41gaQS9-i5xLtpD4I96NEMwnfHiTKJhg7o3sy2xaZm-pgLqGPZZs9_nL8Nd8xme0YAyN96xYZc0tDQKyH8Amyc0FnovcUTvpN7L3A2yWAtepAglxRxZC2adEM8mvh3oeKGMJX0UMHRQYWgfXlwnx_W-YgP1HLe0CERf84su04K9C_a"/>
+<div class="absolute top-4 right-4 bg-surface/90 glass-effect px-3 py-1 text-label-sm font-label-sm text-primary tracking-wider uppercase">Tersedia</div>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Porsche Taycan</h3>
+<p class="font-headline-md text-headline-md text-primary">€450<span class="text-label-sm font-label-sm text-secondary">/hari</span></p>
+</div>
+<div class="flex items-center gap-4 mb-8 text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-label-sm text-label-sm">480km Jarak Tempuh</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+<span class="font-label-sm text-label-sm">260km/jam</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">airline_seat_recline_normal</span>
+<span class="font-label-sm text-label-sm">4 Kursi</span>
+</div>
+</div>
+<a class="mt-auto bg-[#005c55] hover:opacity-90 text-on-primary py-4 px-6 flex items-center justify-center gap-2 font-label-md transition-all group-hover:shadow-lg" href="https://wa.me/yournumber">
+                        Cek Ketersediaan via WA
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Car Card: Tesla Model X Plaid -->
+<article class="car-card group flex flex-col" data-category="SUV">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container-low mb-6">
+<img alt="Tesla Model X Plaid abu-abu metalik gelap dengan pintu falcon-wing terbuka sebagian di lingkungan urban yang canggih." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvV5q3UhMjDyXxYVJlaw2mrhW41mnYmsLk-sgbj1Jzk3WNBg5vDmonWuctWivfVtxYeAUlShDrBxw2L_N7qDkgCUT3E-j8bs63ezDXrNCYZC4ZU_EKuQvhVmqqFrPgbjoAMx4lY44RWPNPsXjfAhRTC6G707tPb8_3S43e6bzE5FHqLGHyRaDm6M6fv9mxB1112QUGLO_Gdk6eLMdCBk-2xx2ZlTmgyu4xdWiqWN3JGsKg53ETPJUf"/>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Tesla Model X Plaid</h3>
+<p class="font-headline-md text-headline-md text-primary">€380<span class="text-label-sm font-label-sm text-secondary">/hari</span></p>
+</div>
+<div class="flex items-center gap-4 mb-8 text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-label-sm text-label-sm">540km Jarak Tempuh</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+<span class="font-label-sm text-label-sm">240km/jam</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">airline_seat_recline_normal</span>
+<span class="font-label-sm text-label-sm">6 Kursi</span>
+</div>
+</div>
+<a class="mt-auto bg-[#005c55] hover:opacity-90 text-on-primary py-4 px-6 flex items-center justify-center gap-2 font-label-md transition-all group-hover:shadow-lg" href="https://wa.me/yournumber">
+                        Cek Ketersediaan via WA
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Car Card: Audi RS e-tron GT -->
+<article class="car-card group flex flex-col" data-category="Sedan">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container-low mb-6">
+<img alt="Audi RS e-tron GT dengan finishing charcoal matte diparkir di jalan pesisir pantai saat golden hour." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Imza09BMfl4m57GrSlMFHPeNyHbsUqdmqkxFMw_0PMlDSW3r4NbdlJeLA2yLscT69oB0WT1K5-m_wTfc_b8jxa0HSO3n9hPFqwxK2VMOiHaiT2jZReEnIEScD7qwwCtfh1_8SAr7JQnPUOHEfUzIoxVIKsgj-JUfwYTTYX93ww3nf7y64Cmu6V1N5bOcLnfSfQXgJKKHNYfQoRg4SKpnOkwh9rtHC5ByVKrV9MrdlACXfX8Bpw-9"/>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Audi RS e-tron GT</h3>
+<p class="font-headline-md text-headline-md text-primary">€420<span class="text-label-sm font-label-sm text-secondary">/hari</span></p>
+</div>
+<div class="flex items-center gap-4 mb-8 text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-label-sm text-label-sm">470km Jarak Tempuh</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+<span class="font-label-sm text-label-sm">250km/jam</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">airline_seat_recline_normal</span>
+<span class="font-label-sm text-label-sm">4 Kursi</span>
+</div>
+</div>
+<a class="mt-auto bg-[#005c55] hover:opacity-90 text-on-primary py-4 px-6 flex items-center justify-center gap-2 font-label-md transition-all group-hover:shadow-lg" href="https://wa.me/yournumber">
+                        Cek Ketersediaan via WA
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Car Card: Mercedes EQS SUV -->
+<article class="car-card group flex flex-col" data-category="SUV">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container-low mb-6">
+<img alt="Mercedes EQS SUV putih berlian di lembah alpine hijau subur dengan kabut lembut." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhfCI2aY3zrdkGtCgtpa98Ivg29SMY3UbNEFkINDttrJhspvVEI_d3RY86cu-zaWK-Nhs9mzi3TUiV2sRsO1QRW1oFJ7wt80RcKXocXqTf7LsX-S2jPJ0UWU_IieMnZ30odoyM3HAM61HJLa5i7smhzlPWpzOHKNUjDdFdMfM06ioX4WiGn7K11V4B0XWyOiUyCgJq6E2JbVyieAl3uBICZPJ_2KyHUFmtSjP2AjrCiqyBU96itJFP"/>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Mercedes EQS SUV</h3>
+<p class="font-headline-md text-headline-md text-primary">€395<span class="text-label-sm font-label-sm text-secondary">/hari</span></p>
+</div>
+<div class="flex items-center gap-4 mb-8 text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-label-sm text-label-sm">510km Jarak Tempuh</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+<span class="font-label-sm text-label-sm">210km/jam</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">airline_seat_recline_normal</span>
+<span class="font-label-sm text-label-sm">7 Kursi</span>
+</div>
+</div>
+<a class="mt-auto bg-[#005c55] hover:opacity-90 text-on-primary py-4 px-6 flex items-center justify-center gap-2 font-label-md transition-all group-hover:shadow-lg" href="https://wa.me/yournumber">
+                        Cek Ketersediaan via WA
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Car Card: Lucid Air Sapphire -->
+<article class="car-card group flex flex-col" data-category="Performance">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container-low mb-6">
+<img alt="Lucid Air Sapphire biru metalik berakselerasi di jalan raya pesisir saat senja." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtPwZ0WhRhpX5XNC9uYKdD5sB4JNhDKXaJEYrV2tpTJyy9oSTn-feDNeEEaYRU6PHGfbnoncaI_F6FzBORBp5aW_AOy6aZtRQWz7pVOpJFF31yII2s_oAOrK13CUQl1fJVy6gwMAt__od4FkSzwmoJRvxwMLjVqNdFtgzvP--egxrooXHV0qPovD-mpw4ottPFHk65asLB33bz59fm2tQuEQlicsCnwBLgazCq6tmCdqHCnYSNmziW"/>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Lucid Air Sapphire</h3>
+<p class="font-headline-md text-headline-md text-primary">€500<span class="text-label-sm font-label-sm text-secondary">/hari</span></p>
+</div>
+<div class="flex items-center gap-4 mb-8 text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-label-sm text-label-sm">680km Jarak Tempuh</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+<span class="font-label-sm text-label-sm">330km/jam</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">airline_seat_recline_normal</span>
+<span class="font-label-sm text-label-sm">5 Kursi</span>
+</div>
+</div>
+<a class="mt-auto bg-[#005c55] hover:opacity-90 text-on-primary py-4 px-6 flex items-center justify-center gap-2 font-label-md transition-all group-hover:shadow-lg" href="https://wa.me/yournumber">
+                        Cek Ketersediaan via WA
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Car Card: Polestar 3 -->
+<article class="car-card group flex flex-col" data-category="SUV">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container-low mb-6">
+<img alt="Polestar 3 SUV off-white dalam pengaturan studio dengan pencahayaan atas yang bersih." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy2Sp7mZ6bUmQF4zjVKfpQW5QgjfWVlpc5boxwNheO24MjS9O_dScWB0jTcgVlgelerY4lzzpxr-PJCjLU_fPNVjfXouOSbn4Aa_F-bcORAbAtc51-TCVt57im8A8bEW6i8brpR6KmqPaA7FaG67xw_hBwYZkBRDSpsi8PLEQPgRHQaq48kme3hgT0QjKhiXbLGEJty5lH5ji9GAMeQSSjxmKZIKlvVKjEkjExopYs0xJfdPM0UZ6B"/>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Polestar 3</h3>
+<p class="font-headline-md text-headline-md text-primary">€320<span class="text-label-sm font-label-sm text-secondary">/hari</span></p>
+</div>
+<div class="flex items-center gap-4 mb-8 text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-label-sm text-label-sm">610km Jarak Tempuh</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+<span class="font-label-sm text-label-sm">210km/jam</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">airline_seat_recline_normal</span>
+<span class="font-label-sm text-label-sm">5 Kursi</span>
+</div>
+</div>
+<a class="mt-auto bg-[#005c55] hover:opacity-90 text-on-primary py-4 px-6 flex items-center justify-center gap-2 font-label-md transition-all group-hover:shadow-lg" href="https://wa.me/yournumber">
+                        Cek Ketersediaan via WA
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low mt-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between gap-base">
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md text-primary">LuxeDrive</div>
+<p class="font-body-md text-body-md max-w-sm text-on-secondary-container">© 2024 LuxeDrive. Penyewaan Presisi Berkelanjutan. Mendefinisikan ulang perjalanan melalui lensa tanggung jawab ekologis.</p>
+</div>
+<div class="grid grid-cols-2 gap-x-20 gap-y-4">
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors" href="#">Ketentuan Layanan</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors" href="#">Panduan Armada</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors" href="#">Dukungan WhatsApp</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around py-3 bg-surface border-t border-outline-variant md:hidden">
+<a class="flex flex-col items-center justify-center text-primary" href="#">
+<span class="material-symbols-outlined">directions_car</span>
+<span class="font-label-sm text-label-sm">Armada</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-label-sm text-label-sm">Tur</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-label-sm text-label-sm">Kontak</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container" href="#">
+<span class="material-symbols-outlined">brand_awareness</span>
+<span class="font-label-sm text-label-sm">WhatsApp</span>
+</a>
+</nav>
+<script>
+        function filterFleet(category) {
+            const cards = document.querySelectorAll('.car-card');
+            const btns = document.querySelectorAll('.category-btn');
+            
+            btns.forEach(btn => {
+                const btnText = btn.textContent.toLowerCase();
+                if (btnText.includes(category.toLowerCase()) || (category === 'all' && btnText.includes('semua'))) {
+                    btn.classList.remove('text-secondary', 'border-outline-variant');
+                    btn.classList.add('bg-on-surface', 'text-surface', 'border-outline');
+                } else {
+                    btn.classList.add('text-secondary', 'border-outline-variant');
+                    btn.classList.remove('bg-on-surface', 'text-surface', 'border-outline');
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                    setTimeout(() => card.style.opacity = '1', 10);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        }
+
+        // Simple Fade-in intersection observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.car-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

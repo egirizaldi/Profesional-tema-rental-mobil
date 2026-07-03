@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LuxeDrive | Sewa Presisi Berkelanjutan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#596376",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-tint": "#006a63",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#e9e9eb",
+                    "tertiary-fixed-dim": "#c6c6c8",
+                    "secondary-container": "#d6e0f6",
+                    "secondary-fixed-dim": "#bdc7dc",
+                    "primary-fixed-dim": "#80d5cb",
+                    "secondary-fixed": "#d9e3f9",
+                    "surface-container-low": "#f3f3f4",
+                    "secondary": "#555f71",
+                    "surface-variant": "#e2e2e2",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454749",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#e8e8e8",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#e2e2e4",
+                    "on-secondary-fixed": "#121c2c",
+                    "surface-container": "#eeeeee",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface-dim": "#dadada",
+                    "primary-container": "#0f766e",
+                    "on-primary-fixed-variant": "#00504a",
+                    "primary": "#005c55",
+                    "inverse-primary": "#80d5cb",
+                    "on-surface": "#1a1c1c",
+                    "outline-variant": "#bdc9c6",
+                    "on-primary": "#ffffff",
+                    "background": "#f9f9f9",
+                    "on-primary-container": "#a3faef",
+                    "on-surface-variant": "#3e4947",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#1a1c1d",
+                    "on-background": "#1a1c1c",
+                    "surface-bright": "#f9f9f9",
+                    "outline": "#6e7977",
+                    "primary-fixed": "#9cf2e8",
+                    "on-primary-fixed": "#00201d",
+                    "surface": "#f9f9f9",
+                    "tertiary": "#4f5153",
+                    "tertiary-container": "#68696b",
+                    "inverse-surface": "#2f3131",
+                    "on-secondary-fixed-variant": "#3d4759"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "section-gap": "120px",
+                    "margin-mobile": "24px",
+                    "margin-desktop": "80px",
+                    "base": "8px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-display": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0", "fontWeight": "500"}],
+                    "headline-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            background: rgba(249, 249, 249, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<nav class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary-fixed-dim font-extrabold uppercase hover:opacity-80 transition-opacity">
+                LuxeDrive
+            </a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-label-md text-label-md" href="katalog.html">Armada</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md" href="paket_wisata.html">Paket</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md" href="tentang.html">Tentang Kami</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md" href="contact.html">Kontak</a>
+</div>
+<a class="hidden md:flex items-center gap-2 bg-primary text-on-primary px-6 py-3 font-label-md text-label-md hover:opacity-80 transition-opacity rounded-DEFAULT" href="https://wa.me/">
+<span class="material-symbols-outlined text-[20px]">brand_awareness</span>
+                Chat via WhatsApp
+            </a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105 transform transition-transform duration-[10s] hover:scale-100" data-alt="A high-end, sleek electric luxury sedan parked in a minimalist, architecturally stunning concrete pavilion during the golden hour. The lighting is soft and directional, highlighting the car's aerodynamic curves and metallic finish. The overall aesthetic is clean, premium, and serene, with a color palette of soft alabaster, charcoal, and emerald green accents, reflecting a modern sustainable luxury vibe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxcZmHhKfyuvSvTztlxKeroHPeS4iy8CchfWu2lekXvZRTMeKPJlOu4g_J4sJRnf8h582gyx6RdqhXfPVj5RlHoWugin3grkbddIQmNQqkrSPy6DuTwExhwVdI93hYQ0va6Kl-nZ6aRpJrFGr4sfGbPimP2K1zwRz3OyxJ51fT5J6gArPbtXBU1IukYAh49IeR_qoAxaO5Bf2HWBwYJU-itaX7-16VC306509jRVYqs1OsP1vwaU5c')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl">
+<h1 class="font-headline-lg text-headline-lg md:text-headline-display mb-6 animate-fade-in-up">
+                        Rasakan <br/><span class="text-primary">Presisi Berkelanjutan.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                        Penyewaan Mobil Mewah Ramah Lingkungan Premium untuk Wisatawan yang Menghargai Kualitas. Mendefinisikan ulang performa tinggi melalui kepedulian lingkungan.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary text-on-primary px-10 py-5 font-label-md text-label-md flex items-center justify-center gap-3 hover:opacity-90 transition-all transform active:scale-95" href="https://wa.me/">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">brand_awareness</span>
+                            Pesan via WhatsApp
+                        </a>
+<a class="border-2 border-secondary text-secondary px-10 py-5 font-label-md text-label-md flex items-center justify-center hover:bg-surface-container transition-all" href="#fleet">
+                            Lihat Armada
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Propositions -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-base group">
+<div class="w-16 h-16 bg-surface-container-low flex items-center justify-center mb-8 transition-transform group-hover:-translate-y-2">
+<span class="material-symbols-outlined text-primary text-[32px]">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Lancar</h3>
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                            Pengalaman pemesanan yang terkurasi dengan layanan pengiriman dan penjemputan eksklusif. Perjalanan Anda dimulai saat Anda memutuskan untuk berangkat.
+                        </p>
+</div>
+<div class="p-base group">
+<div class="w-16 h-16 bg-surface-container-low flex items-center justify-center mb-8 transition-transform group-hover:-translate-y-2">
+<span class="material-symbols-outlined text-primary text-[32px]">eco</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Berkelanjutan</h3>
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                            Armada listrik 100% yang ditenagai oleh energi terbarukan. Performa yang menghormati planet tanpa mengabaikan kemewahan.
+                        </p>
+</div>
+<div class="p-base group">
+<div class="w-16 h-16 bg-surface-container-low flex items-center justify-center mb-8 transition-transform group-hover:-translate-y-2">
+<span class="material-symbols-outlined text-primary text-[32px]">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Aman</h3>
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                            Enkripsi tingkat lanjut dan standar perawatan yang ketat memastikan ketenangan pikiran Anda mutlak seperti presisi kami.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Fleet Carousel -->
+<section class="py-section-gap bg-surface-container-low" id="fleet">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase mb-4 block">Koleksi Kami</span>
+<h2 class="font-headline-lg text-headline-lg">Performa Elite.</h2>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors" onclick="scrollFleet('left')">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors" onclick="scrollFleet('right')">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-gutter overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-8" id="fleet-carousel">
+<!-- Mercedes EQS -->
+<div class="min-w-full md:min-w-[450px] snap-start bg-surface overflow-hidden group">
+<div class="h-[300px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A side-profile studio shot of a Mercedes-Benz EQS in Obsidian Black. The lighting captures the seamless 'one-bow' design, reflecting soft studio lights on its aerodynamic surface. The background is a minimalist soft alabaster gradient, emphasizing the car's elegant and futuristic luxury profile. 8k resolution, commercial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_tPMefKEcujZ0mhbUQYuiRO2fJLIOfN9_M5-nqxrU4f-jkiDmIwK1gfHh_HSyuS2hAfnwNdAC6-KuJfeS2y5UUueukKqTwUqZDgJ9jQM7tg-4zg3ymqAn3MZDLMvPrtodo_aLn7q9HHFKdMow4I88Swuh-oR8XB0ZHiST27pbzeO4OjoZb2Y9Tw4cKEh1pRb9oyFZBckCGTYsnpqh-hS-ciPBI8W9i5MNvz9yZnVbWWr6HdLY8xwG"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-headline-md text-headline-md">Mercedes EQS</h4>
+<p class="text-on-secondary-container font-label-sm">Jarak: 450mi • 0-60: 4.1d</p>
+</div>
+<span class="bg-surface-container px-3 py-1 font-label-sm text-on-surface">Sedan Mewah</span>
+</div>
+<button class="w-full border border-primary text-primary py-4 font-label-md hover:bg-primary hover:text-on-primary transition-all flex justify-center items-center gap-2">
+                                Cek Ketersediaan
+                            </button>
+</div>
+</div>
+<!-- Tesla Model S Plaid -->
+<div class="min-w-full md:min-w-[450px] snap-start bg-surface overflow-hidden group">
+<div class="h-[300px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of a Tesla Model S Plaid in Ultra Red, showcasing the aggressive front fascia and carbon fiber spoiler details. The car is positioned on a clean urban road at twilight, with subtle city lights blurred in the background. The mood is high-performance, minimalist, and technologically sophisticated. High contrast, sharp details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJy_fSu6jOb4-cRUw-W2xJsaFRMAgBd51611ciBlE3wALpDyMUggHkQLKeWaaX6AUx8XgVPquFtKIEq9DHEpuxuZbXMk91dYQ6Fu4mesffYVj_cEe87HhR-SIrlirde8BpwZKE8vEwFb2p--K9qjRJnzGepBj8CJttvoUNLbh8bCy9X1wPz5aPcPADswFBZ7kZNeJhsxp0H43JKPWK_Ju6G_HChUxr2Fo3H3BoldJZgPtpPhn4cqQt"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-headline-md text-headline-md">Tesla Model S</h4>
+<p class="text-on-secondary-container font-label-sm">Jarak: 396mi • 0-60: 1.9d</p>
+</div>
+<span class="bg-surface-container px-3 py-1 font-label-sm text-on-surface">Edisi Plaid</span>
+</div>
+<button class="w-full border border-primary text-primary py-4 font-label-md hover:bg-primary hover:text-on-primary transition-all flex justify-center items-center gap-2">
+                                Cek Ketersediaan
+                            </button>
+</div>
+</div>
+<!-- BMW i7 -->
+<div class="min-w-full md:min-w-[450px] snap-start bg-surface overflow-hidden group">
+<div class="h-[300px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A BMW i7 in Frozen Deep Grey parked in front of a modern glass skyscraper. The architectural lines of the building mirror the car's imposing presence. The crystal headlights are subtly glowing, and the large kidney grille is highlighted by soft evening light. Minimalist, premium, and authoritative aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjuS6C1AKjEQDBnF00OPIKP6s6x-M5yjtNlKo7YAhj6jQ6woguHzpXO2mWCEv5KNaJehWiS6xuISsLlCOT8fiYg8jr06vgy-Ajw2vVP5a9rbUOh0_jVqtYsY0BP0oQmgFiuMx9WlHZ9_3HdHPZJkN1StHZBlph1YoIz_-Fvn9CVM4T1NfUqTBzPQ-8EwZXqbQlosddm2HL9Yy41_vugxmQ-JpWxlHFaoyMj3n-kAdm8KWoLLtvw6Bn"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-headline-md text-headline-md">BMW i7</h4>
+<p class="text-on-secondary-container font-label-sm">Jarak: 318mi • 0-60: 4.5d</p>
+</div>
+<span class="bg-surface-container px-3 py-1 font-label-sm text-on-surface">Executive Lounge</span>
+</div>
+<button class="w-full border border-primary text-primary py-4 font-label-md hover:bg-primary hover:text-on-primary transition-all flex justify-center items-center gap-2">
+                                Cek Ketersediaan
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-gap bg-background">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg">Dipercaya oleh yang Terbaik.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="p-12 bg-surface-container-low relative border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary-container/20 absolute top-8 right-8 text-[80px]">format_quote</span>
+<p class="font-body-lg text-body-lg italic mb-8 relative z-10">
+                            "LuxeDrive telah sepenuhnya mengubah cara saya memandang perjalanan. EQS dikirimkan dengan sempurna ke hotel saya, dan performanya luar biasa. Kemewahan berkelanjutan yang terbaik."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container"></div>
+<div>
+<p class="font-label-md text-label-md">Alexandra Thorne</p>
+<p class="text-on-secondary-container text-label-sm">Eksekutif Teknologi</p>
+</div>
+</div>
+</div>
+<div class="p-12 bg-surface-container-low relative border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary-container/20 absolute top-8 right-8 text-[80px]">format_quote</span>
+<p class="font-body-lg text-body-lg italic mb-8 relative z-10">
+                            "Presisi adalah kata yang tepat. Mulai dari pemesanan WhatsApp yang mudah hingga kondisi Model S yang sangat bersih, LuxeDrive menetapkan standar baru untuk layanan sewa secara global."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container"></div>
+<div>
+<p class="font-label-md text-label-md">Marcus Van Der Berg</p>
+<p class="text-on-secondary-container text-label-sm">Konsultan Keberlanjutan</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-primary-container text-on-primary-container p-12 md:p-24 text-center relative overflow-hidden rounded-lg">
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg mb-8">Siap untuk perjalanan yang lebih baik?</h2>
+<p class="font-body-lg text-body-lg mb-12 max-w-xl mx-auto opacity-90 text-on-primary-container">
+                            Bergabunglah dengan kelompok elit wisatawan yang memilih presisi dan keberlanjutan. Hubungi tim pramutamu kami hari ini.
+                        </p>
+<a class="inline-flex items-center gap-3 bg-on-primary-container text-primary-container px-12 py-6 font-label-md text-label-md hover:bg-on-primary transition-all shadow-xl" href="https://wa.me/">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">brand_awareness</span>
+                            Hubungi Pramutamu
+                        </a>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full border-[40px] border-on-primary-container/10"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between gap-base">
+<div class="max-w-xs">
+<div class="font-headline-md text-headline-md text-primary mb-6">LuxeDrive</div>
+<p class="font-body-md text-body-md text-on-secondary-container mb-8">
+                    © 2024 LuxeDrive. Sewa Presisi Berkelanjutan. Mobilitas premium untuk masa depan yang lebih hijau.
+                </p>
+<!-- SSL/TLS Badges -->
+<div class="flex gap-4 opacity-50 grayscale hover:grayscale-0 transition-all">
+<span class="material-symbols-outlined text-[32px]">verified</span>
+<span class="material-symbols-outlined text-[32px]">lock</span>
+<span class="material-symbols-outlined text-[32px]">shield</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-gutter mt-12 md:mt-0">
+<div class="flex flex-col gap-4">
+<p class="font-label-md text-label-md text-primary mb-2">Layanan</p>
+<a class="text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md" href="#">Panduan Armada</a>
+<a class="text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md" href="#">Dukungan WhatsApp</a>
+<a class="text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md" href="#">Lokasi</a>
+</div>
+<div class="flex flex-col gap-4">
+<p class="font-label-md text-label-md text-primary mb-2">Legal</p>
+<a class="text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md" href="#">Kebijakan Privasi</a>
+<a class="text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md" href="#">Ketentuan Layanan</a>
+<a class="text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md" href="#">Asuransi</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Bottom Nav Mobile -->
+<div class="fixed bottom-0 w-full z-50 flex justify-around py-3 bg-surface dark:bg-surface-dim md:hidden border-t border-outline-variant shadow-md">
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim scale-90 duration-150 active:bg-surface-container-high" href="#">
+<span class="material-symbols-outlined">directions_car</span>
+<span class="font-label-sm text-label-sm">Armada</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim scale-90 duration-150 active:bg-surface-container-high" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-label-sm text-label-sm">Tur</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim scale-90 duration-150 active:bg-surface-container-high" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-label-sm text-label-sm">Kontak</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim scale-90 duration-150 active:bg-surface-container-high" href="https://wa.me/">
+<span class="material-symbols-outlined">brand_awareness</span>
+<span class="font-label-sm text-label-sm">WhatsApp</span>
+</a>
+</div>
+<script>
+        function scrollFleet(direction) {
+            const container = document.getElementById('fleet-carousel');
+            const scrollAmount = direction === 'left' ? -container.offsetWidth : container.offsetWidth;
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+
+        // Simple Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('opacity-0', 'transition-opacity', 'duration-1000');
+        });
+
+        const revealOnScroll = () => {
+            document.querySelectorAll('section').forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    section.classList.remove('opacity-0');
+                    section.classList.add('opacity-100');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+</body></html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        body {
+            background-color: #f9f9f9;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(249, 249, 249, 0) 0%, rgba(249, 249, 249, 1) 100%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#596376",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-tint": "#006a63",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#e9e9eb",
+                        "tertiary-fixed-dim": "#c6c6c8",
+                        "secondary-container": "#d6e0f6",
+                        "secondary-fixed-dim": "#bdc7dc",
+                        "primary-fixed-dim": "#80d5cb",
+                        "secondary-fixed": "#d9e3f9",
+                        "surface-container-low": "#f3f3f4",
+                        "secondary": "#555f71",
+                        "surface-variant": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#454749",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#e2e2e4",
+                        "on-secondary-fixed": "#121c2c",
+                        "surface-container": "#eeeeee",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-dim": "#dadada",
+                        "primary-container": "#0f766e",
+                        "on-primary-fixed-variant": "#00504a",
+                        "primary": "#005c55",
+                        "inverse-primary": "#80d5cb",
+                        "on-surface": "#1a1c1c",
+                        "outline-variant": "#bdc9c6",
+                        "on-primary": "#ffffff",
+                        "background": "#f9f9f9",
+                        "on-primary-container": "#a3faef",
+                        "on-surface-variant": "#3e4947",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "on-background": "#1a1c1c",
+                        "surface-bright": "#f9f9f9",
+                        "outline": "#6e7977",
+                        "primary-fixed": "#9cf2e8",
+                        "on-primary-fixed": "#00201d",
+                        "surface": "#f9f9f9",
+                        "tertiary": "#4f5153",
+                        "tertiary-container": "#68696b",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-fixed-variant": "#3d4759"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "section-gap": "120px",
+                        "margin-mobile": "24px",
+                        "margin-desktop": "80px",
+                        "base": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-display": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0", "fontWeight": "500"}],
+                        "headline-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- Top Navigation -->
+<header class="w-full top-0 sticky z-50 bg-surface">
+<nav class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-primary hover:opacity-80 transition-opacity">LuxeDrive</a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="katalog.html">Armada</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="paket_wisata.html">Paket</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="tentang.html">Tentang Kami</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="contact.html">Kontak</a>
+</div>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-80 transition-opacity transform active:scale-95 duration-200" href="#">
+            WhatsApp Kami
+        </a>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A side view of a sleek, pearl-white luxury electric sedan driving smoothly along a scenic coastal road in Bali at sunset." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBP8rshZCXv2GsGTDrqTMrQ6CSAXaFu2aKEkPAeAn3A_jSNNG05SqYBZgw0PgMNGTH99PGyIEXlLTffTGmbuFOMK3NJ7S_eNPYPw1-dy8SY7_LcSF_29t1VZtW6Psg8m61S-JCQ82PNzxK91DeP9dBkiBW3M6bW-yF-SO5HEfDz52HOpyr5ru5oCurGlniS5QFf97fcHY7VPkOGruf1ZADdLeLhxpM51dbyqvL0FpbTJdCZ2YNCXQRG')"></div>
+<div class="absolute inset-0 bg-black/20 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl">
+<span class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary mb-4 block">Perjalanan Eksklusif</span>
+<h1 class="font-headline-lg text-headline-lg md:text-headline-display mb-6">Presisi Berkelanjutan di Setiap Kilometer.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Pengalaman perjalanan terkurasi yang menggabungkan kendaraan listrik performa tinggi dengan destinasi paling menakjubkan di Indonesia.</p>
+</div>
+</div>
+</section>
+<!-- Gallery Grid Section -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4">Paket Wisata &amp; Perjalanan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Pilih perjalanan yang disesuaikan dengan gaya hidup Anda. Dari pelarian pesisir hingga transit eksekutif, kami mendefinisikan ulang pergerakan.</p>
+</div>
+<div class="flex gap-4">
+<button class="p-3 border border-outline-variant rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low border-none rounded-lg px-6 py-3 font-label-md text-label-md pr-12 focus:ring-2 focus:ring-primary">
+<option>Semua Wilayah</option>
+<option>Bali</option>
+<option>Jakarta</option>
+<option>Jawa</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Bento-style Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Card 1: Pelarian Pesisir Bali (Large) -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low transition-all duration-500 hover:shadow-xl">
+<div class="aspect-[16/9] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A wide panoramic shot of a premium electric SUV parked on a cliffside overlooking Uluwatu Beach in Bali." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMS1l_WpQ9ynoUxvD0EwLxFTLnwa0O6WMfkM3FZJDclzF_Og2ICEDiU5HzST64ZVkm2AnhYxuhwpDUZiouHb5AW71T8gD9gTgkg_1FbQ9PB8t5UzjTPcFICyzMpQIj9DDzuL_2tlXV2mTMztI8PfHgblCWKMk8sIsAEkUy_ifp6SVdKm9_ipY3_E7nUrEnU0Tvq5sDUZCNRFUuwRqPr3L9jSK9-d276sdSbEpbujRCfgoBgHwZ_Yhd')"></div>
+</div>
+<div class="p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex-1">
+<div class="flex gap-2 mb-3">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-label-sm text-label-sm">Bali</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-3 py-1 rounded-full font-label-sm text-label-sm">3 Hari</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Pelarian Pesisir Bali</h3>
+<p class="text-on-surface-variant mb-4 max-w-md">Rasakan kebebasan mutlak di sepanjang pesisir selatan dengan Tesla Model X. Termasuk perhentian vila mewah dan akses pantai pribadi.</p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-2 text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-label-sm text-label-sm">Armada Listrik Penuh</span>
+</div>
+<div class="flex items-center gap-2 text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm">Layanan Pramutamu</span>
+</div>
+</div>
+</div>
+<a class="w-full md:w-auto bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md text-center hover:opacity-90 transition-all active:scale-95 whitespace-nowrap" href="#">
+                        Tanya Tentang Paket
+                    </a>
+</div>
+</div>
+<!-- Card 2: Transit Eksekutif Jakarta -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low transition-all duration-500 hover:shadow-xl">
+<div class="aspect-square overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist urban shot of a high-end black electric sedan driving through the Sudirman Central Business District in Jakarta at night." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-T2dwfj0XzGf30acfOZiaJb1mLDi-Ex4c3mvC0S8KhlPYgSTbJAJkornWdsF5Q0svQU0BD7untJ_8C82OtTj840w_n9sW4529xdIS61LoXEsNnSzUnCIBVkCTHKjptO_wbd3Za-jqED7MSdyxYbzNTZmV06193wJ55p8DKzd4NnhG2CBvixrsOIciJDmdQjFigwjXjZgHET1SY1pcZe-xessHuuF4ggxMt-gzvACyWMk2GfAkY8j5')"></div>
+</div>
+<div class="p-8">
+<div class="flex gap-2 mb-3">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm">Jakarta</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Transit Eksekutif Jakarta</h3>
+<p class="text-on-surface-variant mb-6">Perjalanan yang mulus dan tenang untuk profesional modern. Pilihan dengan pengemudi atau berkendara sendiri mewah.</p>
+<a class="block w-full border border-primary text-primary px-6 py-4 rounded-lg font-label-md text-label-md text-center hover:bg-primary hover:text-on-primary transition-all" href="#">
+                        Tanya Tentang Paket
+                    </a>
+</div>
+</div>
+<!-- Card 3: Relaksasi Pegunungan -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low transition-all duration-500 hover:shadow-xl">
+<div class="aspect-square overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A silver luxury electric sedan winding through a misty mountain road in Puncak, West Java." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0zs9g30rQ5BRCF_f1AkO5Ngi1gqpMo1TzlSuichc9SUl9XGuNQ-BFg7DMKyfitxP1sc92moP4UqKjfGsZBpoaYTYoWvdTqBOAFbrHGrw7hfHtfCHKIe4bki9yri_2pNeY0Tf7zSUcAT2PO7GjlPMRf0znEkrTpx2rw4_ZpH3KU0Jv7wiyYTuOyCSIGScAA0m96iNemit9TELQ5bL_pccWuandmNqh4m1D50HSAdfv6FmV35GNAT8y')"></div>
+</div>
+<div class="p-8">
+<div class="flex gap-2 mb-3">
+<span class="bg-surface-container-highest text-on-surface-variant px-3 py-1 rounded-full font-label-sm text-label-sm">Jawa Barat</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Relaksasi Pegunungan</h3>
+<p class="text-on-surface-variant mb-6">Mendaki ke dalam kabut dengan performa jarak jauh. Sempurna untuk liburan akhir pekan ke Puncak atau Bandung.</p>
+<a class="block w-full border border-primary text-primary px-6 py-4 rounded-lg font-label-md text-label-md text-center hover:bg-primary hover:text-on-primary transition-all" href="#">
+                        Tanya Tentang Paket
+                    </a>
+</div>
+</div>
+<!-- Card 4: Tur Warisan Jawa (Horizontal) -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low transition-all duration-500 hover:shadow-xl">
+<div class="aspect-[21/9] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A serene shot of a premium electric car parked near the ancient Borobudur temple at dawn." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuOfN0sLr8C06VMjSBfkc_yx-sdvndA4J6EmQUaAEjSTfDllEArRlvRTOhmC6t3xj-6lRArMMFZYOGcvR-Hx2Op9CMB6U0OI3cUD4wzHrt2nk5h1DHyPfEwmezsJrhC37qKxdcHztRaT0esHYQBrF1ok95-u8JK2Zh89ryhWIIGehScqXVxxAS59QqBPu-X1A_LPBGv4PawIAOlXbXN0K1QJRldVqzDdrL6D2IQ467Xn2n3OZpVpW4')"></div>
+</div>
+<div class="p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex-1">
+<div class="flex gap-2 mb-3">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-label-sm text-label-sm">Yogyakarta</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-3 py-1 rounded-full font-label-sm text-label-sm">5 Hari</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Tur Warisan Jawa</h3>
+<p class="text-on-surface-variant mb-4 max-w-md">Ekspedisi beberapa hari melalui bangunan bersejarah di Jawa dengan infrastruktur pengisian daya yang telah dipetakan untuk kenyamanan Anda.</p>
+</div>
+<a class="w-full md:w-auto bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md text-center hover:opacity-90 transition-all" href="#">
+                        Tanya Tentang Paket
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Values -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="text-center p-8">
+<span class="material-symbols-outlined text-primary text-[48px] mb-6" style="font-variation-settings: 'FILL' 1;">eco</span>
+<h4 class="font-headline-md text-headline-md mb-4">Bebas Emisi</h4>
+<p class="text-on-surface-variant">Seluruh armada kami terdiri dari model listrik terbaru, memastikan perjalanan Anda hanya meninggalkan kenangan, bukan jejak karbon.</p>
+</div>
+<div class="text-center p-8">
+<span class="material-symbols-outlined text-primary text-[48px] mb-6" style="font-variation-settings: 'FILL' 1;">security</span>
+<h4 class="font-headline-md text-headline-md mb-4">Presisi Utama</h4>
+<p class="text-on-surface-variant">Kendaraan yang dirawat dengan cermat dan logistik ahli. Kami menghargai waktu dan keselamatan Anda di atas segalanya.</p>
+</div>
+<div class="text-center p-8">
+<span class="material-symbols-outlined text-primary text-[48px] mb-6" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+<h4 class="font-headline-md text-headline-md mb-4">Layanan Pramutamu 24/7</h4>
+<p class="text-on-surface-variant">Tim berdedikasi tersedia sepanjang waktu untuk membantu perencanaan rute, pengisian daya, atau rekomendasi lokal.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between gap-base border-t border-outline-variant/30">
+<div class="max-w-sm">
+<div class="font-headline-md text-headline-md text-primary mb-6">LuxeDrive</div>
+<p class="text-on-secondary-container mb-8">Penyewaan kendaraan listrik premium dan pengalaman perjalanan terkurasi untuk pelancong yang sadar lingkungan.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-gutter md:gap-16">
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface/50">Perusahaan</span>
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">Tentang Kami</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">Panduan Armada</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">Dukungan WhatsApp</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface/50">Legal</span>
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop pb-8 text-on-secondary-container opacity-60 font-body-md text-body-md">
+        © 2024 LuxeDrive. Sustainable Precision Rental.
+    </div>
+</footer>
+<!-- Bottom Nav for Mobile -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around py-3 bg-surface border-t border-outline-variant md:hidden">
+<a class="flex flex-col items-center justify-center text-on-secondary-container active:bg-surface-container-high transition-all duration-150 scale-90" href="#">
+<span class="material-symbols-outlined">directions_car</span>
+<span class="font-label-sm text-label-sm">Armada</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary active:bg-surface-container-high transition-all duration-150 scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">map</span>
+<span class="font-label-sm text-label-sm">Tur</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container active:bg-surface-container-high transition-all duration-150 scale-90" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-label-sm text-label-sm">Kontak</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container active:bg-surface-container-high transition-all duration-150 scale-90" href="#">
+<span class="material-symbols-outlined">brand_awareness</span>
+<span class="font-label-sm text-label-sm">WhatsApp</span>
+</a>
+</nav>
+<script>
+    // Simple scroll effect for the header
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('shadow-sm', 'bg-surface/90', 'backdrop-blur-md');
+        } else {
+            header.classList.remove('shadow-sm', 'bg-surface/90', 'backdrop-blur-md');
+        }
+    });
+
+    // WhatsApp inquiry simulation
+    document.querySelectorAll('a[href="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            if (this.innerText.includes('Tanya') || this.innerText.includes('WhatsApp')) {
+                e.preventDefault();
+                console.log('Redirecting to WhatsApp for package details...');
+                // In a real scenario: window.location.href = "https://wa.me/..."
+            }
+        });
+    });
+</script>
+</body></html>

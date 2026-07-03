@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hubungi LuxeDrive | Presisi Berkelanjutan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-container": "#596376",
+                "surface-container-highest": "#e2e2e2",
+                "surface-tint": "#006a63",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-container": "#e9e9eb",
+                "tertiary-fixed-dim": "#c6c6c8",
+                "secondary-container": "#d6e0f6",
+                "secondary-fixed-dim": "#bdc7dc",
+                "primary-fixed-dim": "#80d5cb",
+                "secondary-fixed": "#d9e3f9",
+                "surface-container-low": "#f3f3f4",
+                "secondary": "#555f71",
+                "surface-variant": "#e2e2e2",
+                "on-error": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed-variant": "#454749",
+                "on-error-container": "#93000a",
+                "surface-container-high": "#e8e8e8",
+                "on-secondary": "#ffffff",
+                "error": "#ba1a1a",
+                "tertiary-fixed": "#e2e2e4",
+                "on-secondary-fixed": "#121c2c",
+                "surface-container": "#eeeeee",
+                "inverse-on-surface": "#f0f1f1",
+                "surface-dim": "#dadada",
+                "primary-container": "#0f766e",
+                "on-primary-fixed-variant": "#00504a",
+                "primary": "#005c55",
+                "inverse-primary": "#80d5cb",
+                "on-surface": "#1a1c1c",
+                "outline-variant": "#bdc9c6",
+                "on-primary": "#ffffff",
+                "background": "#f9f9f9",
+                "on-primary-container": "#a3faef",
+                "on-surface-variant": "#3e4947",
+                "error-container": "#ffdad6",
+                "on-tertiary-fixed": "#1a1c1d",
+                "on-background": "#1a1c1c",
+                "surface-bright": "#f9f9f9",
+                "outline": "#6e7977",
+                "primary-fixed": "#9cf2e8",
+                "on-primary-fixed": "#00201d",
+                "surface": "#f9f9f9",
+                "tertiary": "#4f5153",
+                "tertiary-container": "#68696b",
+                "inverse-surface": "#2f3131",
+                "on-secondary-fixed-variant": "#3d4759"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "32px",
+                "section-gap": "120px",
+                "margin-mobile": "24px",
+                "margin-desktop": "80px",
+                "base": "8px",
+                "container-max": "1280px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Inter"],
+                "label-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "label-sm": ["Inter"],
+                "headline-display": ["Inter"],
+                "headline-md": ["Inter"],
+                "headline-lg": ["Inter"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0", "fontWeight": "500"}],
+                "headline-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .map-container {
+            filter: grayscale(1) contrast(1.1) brightness(0.9);
+            transition: filter 0.5s ease;
+        }
+        .map-container:hover {
+            filter: grayscale(0.5) contrast(1) brightness(1);
+        }
+        .backdrop-blur-custom {
+            backdrop-filter: blur(12px);
+            background-color: rgba(249, 249, 249, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity">LuxeDrive</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="katalog.html">Armada</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="paket_wisata.html">Paket</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="tentang.html">Tentang</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="contact.html">Kontak</a>
+</div>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-3 font-label-md text-label-md rounded-DEFAULT hover:opacity-80 transition-opacity active:scale-95 duration-200">
+            WhatsApp Kami
+        </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="min-h-screen">
+<!-- Hero Section -->
+<header class="max-w-container-max mx-auto px-margin-desktop pt-24 pb-section-gap">
+<div class="max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg md:text-headline-display mb-8">Kami di sini untuk membantu Anda.</h1>
+<p class="font-body-lg text-body-lg text-on-secondary-container">Rasakan puncak kemewahan berkelanjutan. Tim kami berdedikasi untuk memberikan pengalaman penyewaan yang mulus dan presisi, disesuaikan dengan nilai-nilai lingkungan Anda.</p>
+</div>
+</header>
+<!-- Interactive Map Section -->
+<section class="w-full h-[614px] relative overflow-hidden bg-surface-container">
+<div class="absolute inset-0 z-0 map-container" data-location="Stuttgart, Germany">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDF1VCMdU_sAal1J5ZXItWwZwgg7zNXCNivNQvQtNh2HlAwfGBfLkY7kpM05Oo1wIXZiCOyS3X31Q4YzGH7_pbVIJCp-wkW7QxKGiewx57oLlYzjGngpHDJuq1kd_J4fH1g5z8748glAS6m8ktSp8igbIycKF71oGX8RrS3aZzEE8xe5F0COSKt1M57YWsp9zZsiGmFh_m2V3nZmvzSXocNZOu15hIrqjtLYdPkMQTnYlvtSX7Mg_Tm')"></div>
+</div>
+<!-- Floating Contact Card (Desktop Only) -->
+<div class="hidden lg:block absolute right-margin-desktop top-1/2 -translate-y-1/2 z-10 w-[400px]">
+<div class="bg-surface-container-lowest p-12 shadow-sm rounded-DEFAULT border border-outline-variant/30">
+<h2 class="font-headline-md text-headline-md mb-8 text-primary">Kantor Pusat</h2>
+<div class="space-y-10">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest block mb-2">Alamat Perusahaan</span>
+<p class="font-body-md text-body-md leading-relaxed">
+                            Innovation Way 88<br/>
+                            70435 Stuttgart<br/>
+                            Jerman
+                        </p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest block mb-2">Saluran Langsung</span>
+<div class="flex gap-6 mt-4">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">link</span>
+<span class="font-label-md text-label-md">LinkedIn</span>
+</a>
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+<span class="font-label-md text-label-md">Instagram</span>
+</a>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 px-8 font-label-md text-label-md flex justify-between items-center group transition-all hover:opacity-90">
+<span>CHAT DENGAN ADMIN</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Mobile Info Section -->
+<section class="lg:hidden bg-surface px-margin-mobile py-20">
+<div class="space-y-16">
+<div>
+<h2 class="font-headline-md text-headline-md mb-6 text-primary">Kantor Pusat</h2>
+<p class="font-body-md text-body-md leading-relaxed text-on-secondary-container">
+                    Innovation Way 88<br/>
+                    70435 Stuttgart<br/>
+                    Jerman
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest block mb-4">Sosial</span>
+<div class="space-y-4">
+<a class="text-secondary hover:text-primary transition-colors block font-label-md text-label-md" href="#">LinkedIn</a>
+<a class="text-secondary hover:text-primary transition-colors block font-label-md text-label-md" href="#">Instagram</a>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest block mb-4">Dukungan</span>
+<div class="space-y-4">
+<a class="text-secondary hover:text-primary transition-colors block font-label-md text-label-md" href="#">WhatsApp</a>
+<a class="text-secondary hover:text-primary transition-colors block font-label-md text-label-md" href="#">Email Kami</a>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 px-8 font-label-md text-label-md flex justify-between items-center active:scale-95 transition-transform">
+<span>CHAT DENGAN ADMIN</span>
+<span class="material-symbols-outlined">brand_awareness</span>
+</button>
+</div>
+</section>
+<!-- Ambient Detail Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-section-gap border-t border-outline-variant/10">
+<div class="grid md:grid-cols-2 gap-gutter items-center">
+<div class="order-2 md:order-1">
+<div class="w-full aspect-[4/3] bg-cover bg-center rounded-DEFAULT" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKwtSoKD4ebiLTFjWeKluX-jDAVNmGecFPU_Bmy8cd7Zo65a_BJNViYTaM-ppm4T4_6pSWeeTbYtl20QBKJqI4a_oQ3eSinhAKzpQbGUHPGHhAFgbUUge1tYWGH1rmpcWElMv_Xu2VlGXbbWLN0IX9lxVkmGzCtMRE_q9ZJ4D4FQsR8-lQIDKbBM9uW5M8bHjDREv2zYHc-vPXskyUFdB-FRdXcTcF7jtNl-i1IdwddPeCdQAyXRg8')"></div>
+</div>
+<div class="order-1 md:order-2 space-y-8">
+<h3 class="font-headline-md text-headline-md">Dukungan Presisi.</h3>
+<p class="font-body-md text-body-md text-on-secondary-container">Layanan concierge kami beroperasi dengan presisi yang sama seperti kendaraan yang kami kelola. Baik Anda memerlukan solusi armada khusus atau paket pribadi, administrator kami tersedia untuk konsultasi langsung.</p>
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined text-[32px]">schedule</span>
+<div>
+<p class="font-label-md text-label-md">Ketersediaan</p>
+<p class="font-body-md text-body-md">Senin — Jumat, 08:00 - 20:00 CET</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between gap-base">
+<div class="flex flex-col gap-6">
+<div class="font-headline-md text-headline-md text-primary">LuxeDrive</div>
+<p class="font-body-md text-body-md text-on-secondary-container max-w-sm">© 2024 LuxeDrive. Penyewaan Presisi Berkelanjutan.</p>
+</div>
+<div class="grid grid-cols-2 md:flex md:flex-row gap-12 mt-12 md:mt-0">
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-outline uppercase">Sumber Daya</span>
+<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Panduan Armada</a>
+<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Dukungan WhatsApp</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-outline uppercase">Legal</span>
+<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Ketentuan Layanan</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around py-3 bg-surface dark:bg-surface-dim border-t border-outline-variant md:hidden shadow-md">
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim active:bg-surface-container-high transition-colors px-4 py-1" href="#">
+<span class="material-symbols-outlined">directions_car</span>
+<span class="font-label-sm text-label-sm">Armada</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim active:bg-surface-container-high transition-colors px-4 py-1" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-label-sm text-label-sm">Tur</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim active:bg-surface-container-high transition-colors px-4 py-1" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-label-sm text-label-sm">Kontak</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim active:bg-surface-container-high transition-colors px-4 py-1" href="#">
+<span class="material-symbols-outlined">brand_awareness</span>
+<span class="font-label-sm text-label-sm">WhatsApp</span>
+</a>
+</nav>
+<script>
+    // Simple intersection observer for reveal animations
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section, header').forEach(el => {
+        el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(el);
+    });
+
+    // Hover micro-interaction for the buttons
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(btn => {
+        btn.addEventListener('mousedown', () => {
+            btn.style.transform = 'scale(0.98)';
+        });
+        btn.addEventListener('mouseup', () => {
+            btn.style.transform = 'scale(1)';
+        });
+    });
+</script>
+</body></html>
