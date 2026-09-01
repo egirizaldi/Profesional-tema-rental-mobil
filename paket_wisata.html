@@ -117,10 +117,10 @@
         }
     </script>
 </head>
-<body class="bg-surface text-on-surface font-body-md">
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
 <!-- Top Navigation -->
 <header class="w-full top-0 sticky z-50 bg-surface">
-<nav class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<nav class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
 <a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-primary hover:opacity-80 transition-opacity">LuxeDrive</a>
 <div class="hidden md:flex gap-gutter items-center">
 <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="katalog.html">Armada</a>
@@ -128,11 +128,23 @@
 <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="tentang.html">Tentang Kami</a>
 <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="contact.html">Kontak</a>
 </div>
-<a class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-80 transition-opacity transform active:scale-95 duration-200" href="#">
+<button class="md:hidden text-primary" id="menu-toggle"><span class="material-symbols-outlined text-[32px]">menu</span></button>
+<a class="hidden md:flex bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-80 transition-opacity transform active:scale-95 duration-200" href="#">
             WhatsApp Kami
         </a>
 </nav>
 </header>
+<!-- Mobile Navigation -->
+<div id="mobile-nav" class="fixed top-20 left-0 w-full z-40 bg-surface border-b border-outline-variant transform -translate-y-full opacity-0 transition-all duration-300 md:hidden">
+<nav class="flex flex-col p-6 gap-1">
+<a href="index.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Beranda</a>
+<a href="katalog.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Armada</a>
+<a href="paket_wisata.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Paket</a>
+<a href="tentang.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Tentang Kami</a>
+<a href="contact.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Kontak</a>
+<a href="https://wa.me/" class="mt-2 py-3 px-4 bg-primary text-on-primary font-label-md text-label-md text-center rounded">WhatsApp Kami</a>
+</nav>
+</div>
 <main>
 <!-- Hero Section -->
 <section class="relative h-[614px] flex items-center overflow-hidden">
@@ -140,19 +152,19 @@
 <div class="w-full h-full bg-cover bg-center" data-alt="A side view of a sleek, pearl-white luxury electric sedan driving smoothly along a scenic coastal road in Bali at sunset." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBP8rshZCXv2GsGTDrqTMrQ6CSAXaFu2aKEkPAeAn3A_jSNNG05SqYBZgw0PgMNGTH99PGyIEXlLTffTGmbuFOMK3NJ7S_eNPYPw1-dy8SY7_LcSF_29t1VZtW6Psg8m61S-JCQ82PNzxK91DeP9dBkiBW3M6bW-yF-SO5HEfDz52HOpyr5ru5oCurGlniS5QFf97fcHY7VPkOGruf1ZADdLeLhxpM51dbyqvL0FpbTJdCZ2YNCXQRG')"></div>
 <div class="absolute inset-0 bg-black/20 hero-gradient"></div>
 </div>
-<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
 <div class="max-w-2xl">
 <span class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary mb-4 block">Perjalanan Eksklusif</span>
-<h1 class="font-headline-lg text-headline-lg md:text-headline-display mb-6">Paket Wisata & Perjalanan Premium</h1>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg-mobile md:text-headline-display mb-6">Paket Wisata & Perjalanan Premium</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Nikmati perjalanan dengan kendaraan listrik premium ke destinasi terbaik Indonesia. Layanan pramutamu profesional untuk kenyamanan maksimal.</p>
 </div>
 </div>
 </section>
 <!-- Gallery Grid Section -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-desktop">
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
 <div>
-<h2 class="font-headline-lg text-headline-lg mb-4">Paket Wisata &amp; Perjalanan</h2>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">Paket Wisata &amp; Perjalanan</h2>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Pilih perjalanan yang disesuaikan dengan gaya hidup Anda. Dari pelarian pesisir hingga transit eksekutif, kami mendefinisikan ulang pergerakan.</p>
 </div>
 <div class="flex gap-4">
@@ -256,7 +268,7 @@
 </section>
 <!-- Trust & Values -->
 <section class="bg-surface-container-low py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <div class="text-center p-8">
 <span class="material-symbols-outlined text-primary text-[48px] mb-6" style="font-variation-settings: 'FILL' 1;">eco</span>
 <h4 class="font-headline-md text-headline-md mb-4">Bebas Emisi</h4>
@@ -277,7 +289,7 @@
 </main>
 <!-- Footer -->
 <footer class="bg-surface-container-low dark:bg-surface-container-lowest">
-<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between gap-base border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between gap-base border-t border-outline-variant/30">
 <div class="max-w-sm">
 <div class="font-headline-md text-headline-md text-primary mb-6">LuxeDrive</div>
 <p class="text-on-secondary-container mb-8">Penyewaan kendaraan listrik premium dan pengalaman perjalanan terkurasi untuk pelancong yang sadar lingkungan.</p>
@@ -296,7 +308,7 @@
 </div>
 </div>
 </div>
-<div class="max-w-container-max mx-auto px-margin-desktop pb-8 text-on-secondary-container opacity-60 font-body-md text-body-md">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-8 text-on-secondary-container opacity-60 font-body-md text-body-md">
         © 2026 LuxeDrive. Sustainable Precision Rental.
     </div>
 </footer>
@@ -342,3 +354,26 @@
     });
 </script>
 </body></html>
+<script>
+(function(){
+var btn=document.getElementById('menu-toggle');
+var nav=document.getElementById('mobile-nav');
+if(btn&&nav){
+btn.addEventListener('click',function(){
+nav.classList.toggle('-translate-y-full');
+nav.classList.toggle('opacity-0');
+nav.classList.toggle('opacity-100');
+var icon=btn.querySelector('.material-symbols-outlined');
+if(icon)icon.textContent=nav.classList.contains('opacity-100')?'close':'menu';
+});
+nav.querySelectorAll('a').forEach(function(a){
+a.addEventListener('click',function(){
+nav.classList.add('-translate-y-full','opacity-0');
+nav.classList.remove('opacity-100');
+var icon=btn.querySelector('.material-symbols-outlined');
+if(icon)icon.textContent='menu';
+});
+});
+}
+})();
+</script>

@@ -113,10 +113,10 @@
         }
     </style>
 </head>
-<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed overflow-x-hidden">
 <!-- Top Navigation -->
 <nav class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim">
-<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
 <a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary-fixed-dim font-extrabold uppercase hover:opacity-80 transition-opacity">
                 LuxeDrive
             </a>
@@ -130,21 +130,32 @@
 <span class="material-symbols-outlined text-[20px]">brand_awareness</span>
                 Chat via WhatsApp
             </a>
-<button class="md:hidden text-primary">
+<button class="md:hidden text-primary" id="menu-toggle">
 <span class="material-symbols-outlined text-[32px]">menu</span>
 </button>
 </div>
 </nav>
+<!-- Mobile Navigation -->
+<div id="mobile-nav" class="fixed top-20 left-0 w-full z-40 bg-surface border-b border-outline-variant transform -translate-y-full opacity-0 transition-all duration-300 md:hidden">
+<nav class="flex flex-col p-6 gap-1">
+<a href="index.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Beranda</a>
+<a href="katalog.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Armada</a>
+<a href="paket_wisata.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Paket</a>
+<a href="tentang.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Tentang Kami</a>
+<a href="contact.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Kontak</a>
+<a href="https://wa.me/" class="mt-2 py-3 px-4 bg-primary text-on-primary font-label-md text-label-md text-center rounded">WhatsApp Kami</a>
+</nav>
+</div>
 <main>
 <!-- Hero Section -->
-<section class="relative h-[700px] flex items-center overflow-hidden">
+<section class="relative h-[500px] md:h-[700px] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
 <div class="w-full h-full bg-cover bg-center scale-105 transform transition-transform duration-[10s] hover:scale-100" data-alt="A high-end, sleek electric luxury sedan parked in a minimalist, architecturally stunning concrete pavilion during the golden hour. The lighting is soft and directional, highlighting the car's aerodynamic curves and metallic finish. The overall aesthetic is clean, premium, and serene, with a color palette of soft alabaster, charcoal, and emerald green accents, reflecting a modern sustainable luxury vibe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxcZmHhKfyuvSvTztlxKeroHPeS4iy8CchfWu2lekXvZRTMeKPJlOu4g_J4sJRnf8h582gyx6RdqhXfPVj5RlHoWugin3grkbddIQmNQqkrSPy6DuTwExhwVdI93hYQ0va6Kl-nZ6aRpJrFGr4sfGbPimP2K1zwRz3OyxJ51fT5J6gArPbtXBU1IukYAh49IeR_qoAxaO5Bf2HWBwYJU-itaX7-16VC306509jRVYqs1OsP1vwaU5c')"></div>
 <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
 </div>
-<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
 <div class="max-w-2xl">
-<h1 class="font-headline-lg text-headline-lg md:text-headline-display mb-6 animate-fade-in-up">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg-mobile md:text-headline-display mb-6 animate-fade-in-up">
                         Perjalanan Mewah,<br/><span class="text-primary">Tanggung Jawab Lingkungan.</span>
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
@@ -164,7 +175,7 @@
 </section>
 <!-- Value Propositions -->
 <section class="py-section-gap bg-surface">
-<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <div class="p-base group">
 <div class="w-16 h-16 bg-surface-container-low flex items-center justify-center mb-8 transition-transform group-hover:-translate-y-2">
@@ -198,11 +209,11 @@
 </section>
 <!-- Featured Fleet Carousel -->
 <section class="py-section-gap bg-surface-container-low" id="fleet">
-<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
 <div class="max-w-xl">
 <span class="font-label-md text-label-md text-primary tracking-widest uppercase mb-4 block">Koleksi Kami</span>
-<h2 class="font-headline-lg text-headline-lg">Performa Elite.</h2>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Performa Elite.</h2>
 </div>
 <div class="flex gap-4">
 <button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors" onclick="scrollFleet('left')">
@@ -273,9 +284,9 @@
 </section>
 <!-- Testimonials -->
 <section class="py-section-gap bg-background">
-<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="text-center mb-16">
-<h2 class="font-headline-lg text-headline-lg">Dipercaya oleh yang Terbaik.</h2>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Dipercaya oleh yang Terbaik.</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <div class="p-12 bg-surface-container-low relative border-l-4 border-primary">
@@ -309,10 +320,10 @@
 </section>
 <!-- Final CTA -->
 <section class="py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="bg-primary-container text-on-primary-container p-12 md:p-24 text-center relative overflow-hidden rounded-lg">
 <div class="relative z-10">
-<h2 class="font-headline-lg text-headline-lg mb-8">Siap untuk perjalanan yang lebih baik?</h2>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Siap untuk perjalanan yang lebih baik?</h2>
 <p class="font-body-lg text-body-lg mb-12 max-w-xl mx-auto opacity-90 text-on-primary-container">
                             Siap merasakan perjalanan yang lebih baik? Hubungi tim pramutamu kami untuk konsultasi armada dan paket khusus.
                         </p>
@@ -329,7 +340,7 @@
 </main>
 <!-- Footer -->
 <footer class="bg-surface-container-low dark:bg-surface-container-lowest">
-<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between gap-base">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between gap-base">
 <div class="max-w-xs">
 <div class="font-headline-md text-headline-md text-primary mb-6">LuxeDrive</div>
 <p class="font-body-md text-body-md text-on-secondary-container mb-8">
@@ -416,3 +427,26 @@
         window.addEventListener('load', revealOnScroll);
     </script>
 </body></html>
+<script>
+(function(){
+var btn=document.getElementById('menu-toggle');
+var nav=document.getElementById('mobile-nav');
+if(btn&&nav){
+btn.addEventListener('click',function(){
+nav.classList.toggle('-translate-y-full');
+nav.classList.toggle('opacity-0');
+nav.classList.toggle('opacity-100');
+var icon=btn.querySelector('.material-symbols-outlined');
+if(icon)icon.textContent=nav.classList.contains('opacity-100')?'close':'menu';
+});
+nav.querySelectorAll('a').forEach(function(a){
+a.addEventListener('click',function(){
+nav.classList.add('-translate-y-full','opacity-0');
+nav.classList.remove('opacity-100');
+var icon=btn.querySelector('.material-symbols-outlined');
+if(icon)icon.textContent='menu';
+});
+});
+}
+})();
+</script>

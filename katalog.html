@@ -122,7 +122,7 @@
 <body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
 <!-- TopNavBar -->
 <header class="w-full top-0 sticky z-50 bg-surface/80 glass-effect">
-<nav class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<nav class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
 <a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-primary hover:opacity-80 transition-opacity">LuxeDrive</a>
 <div class="hidden md:flex gap-gutter items-center">
 <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="katalog.html">Armada</a>
@@ -130,17 +130,29 @@
 <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="tentang.html">Tentang Kami</a>
 <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="contact.html">Kontak</a>
 </div>
-<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-md hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<button class="md:hidden text-primary" id="menu-toggle"><span class="material-symbols-outlined text-[32px]">menu</span></button>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded font-label-md hover:opacity-80 transition-opacity active:scale-95 duration-200">
                 Hubungi via WhatsApp
             </button>
 </nav>
 </header>
+<!-- Mobile Navigation -->
+<div id="mobile-nav" class="fixed top-20 left-0 w-full z-40 bg-surface border-b border-outline-variant transform -translate-y-full opacity-0 transition-all duration-300 md:hidden">
+<nav class="flex flex-col p-6 gap-1">
+<a href="index.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Beranda</a>
+<a href="katalog.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Armada</a>
+<a href="paket_wisata.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Paket</a>
+<a href="tentang.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Tentang Kami</a>
+<a href="contact.html" class="py-3 px-4 text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-body-md rounded">Kontak</a>
+<a href="https://wa.me/" class="mt-2 py-3 px-4 bg-primary text-on-primary font-label-md text-label-md text-center rounded">WhatsApp Kami</a>
+</nav>
+</div>
 <!-- Hero / Title Section -->
-<section class="max-w-container-max mx-auto px-margin-desktop mt-20 mb-10">
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 mb-10">
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
 <div class="max-w-2xl">
 <span class="font-label-md text-label-md text-primary tracking-widest block mb-4">ARMADA KAMI</span>
-<h1 class="font-headline-lg text-headline-lg leading-tight">Armada Listrik Premium Pilihan</h1>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg leading-tight">Armada Listrik Premium Pilihan</h1>
 </div>
 <div class="flex gap-4 no-scrollbar overflow-x-auto pb-4 md:pb-0">
 <button class="category-btn px-6 py-2 rounded-full border border-outline text-label-md font-label-md bg-on-surface text-surface" data-active="true" onclick="filterFleet('all')">Semua Model</button>
@@ -151,7 +163,7 @@
 </div>
 </section>
 <!-- Fleet Grid -->
-<main class="max-w-container-max mx-auto px-margin-desktop py-base">
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-base">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-section-gap gap-x-gutter" id="fleet-grid">
 <!-- Car Card: Porsche Taycan -->
 <article class="car-card group flex flex-col" data-category="Performance">
@@ -338,7 +350,7 @@
 </main>
 <!-- Footer -->
 <footer class="bg-surface-container-low mt-section-gap">
-<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between gap-base">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between gap-base">
 <div class="flex flex-col gap-4">
 <div class="font-headline-md text-headline-md text-primary">LuxeDrive</div>
 <p class="font-body-md text-body-md max-w-sm text-on-secondary-container">© 2026 LuxeDrive. Penyewaan Presisi Berkelanjutan. Mendefinisikan ulang perjalanan melalui lensa tanggung jawab ekologis.</p>
@@ -417,3 +429,26 @@
         });
     </script>
 </body></html>
+<script>
+(function(){
+var btn=document.getElementById('menu-toggle');
+var nav=document.getElementById('mobile-nav');
+if(btn&&nav){
+btn.addEventListener('click',function(){
+nav.classList.toggle('-translate-y-full');
+nav.classList.toggle('opacity-0');
+nav.classList.toggle('opacity-100');
+var icon=btn.querySelector('.material-symbols-outlined');
+if(icon)icon.textContent=nav.classList.contains('opacity-100')?'close':'menu';
+});
+nav.querySelectorAll('a').forEach(function(a){
+a.addEventListener('click',function(){
+nav.classList.add('-translate-y-full','opacity-0');
+nav.classList.remove('opacity-100');
+var icon=btn.querySelector('.material-symbols-outlined');
+if(icon)icon.textContent='menu';
+});
+});
+}
+})();
+</script>
